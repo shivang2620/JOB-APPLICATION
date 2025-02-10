@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aqua;
+      }
+      form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 4px 5px 10px 5px gold;
+        border-radius: 10px;
+    }
+      form p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: 1px;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      h2 {
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://api.web3forms.com/submit" method="POST"">
+      <input type="hidden" name="access_key" value="393e54fe-f18c-4de4-bd15-ced881365e8f">
+      <h1 style="background-color: aliceblue;">Job Application</h1>
+      <p>
+        <input type="text" name="name" placeholder="Full Name" />
+      </p>
+      <p>
+        <input type="email" name="email" placeholder="email" />
+      </p>
+      <p>
+        <input type="number" name="phone" placeholder="Phone number" />
+      </p>
+      <p>
+        <input type="radio" name="gender" id="male" /><label for="male"
+          >Male</label
+        >
+        <input type="radio" name="gender" id="female" /><label for="female"
+          >female</label
+        >
+        <input type="radio" name="gender" id="others" /><label for="others"
+          >others</label
+        >
+      </p>
+      <p>
+        <input type="file" name="file multiple" />
+      </p>
+      <p>
+        <select name="position">
+          <option value="developer">Developer</option>
+          <option value="designer">Designerr</option>
+          <option value="manager">Manager</option>
+        </select>
+      </p>
+      <p>
+        <input
+          type="number"
+          name="experience"
+          min="0"
+          placeholder="year of experience"
+        />
+      </p>
+      <p>
+        <textarea name="comments" placeholder="Comments" rows="4"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Submit Application" />
+      </p>
+    </form>
+  </body>
+</html>
